@@ -81,6 +81,7 @@ dependencies:
   flutter_share: ^2.0.0
   map_launcher: ^3.1.0
   fluttercontactpicker: ^4.7.0
+  flutter_dotenv: ^5.0.2
 
   #payment dependency
   flutter_stripe: ^9.5.0+1
@@ -96,6 +97,12 @@ dependency_overrides:
 
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo.svg"
+  min_sdk_android: 21
   flutter_test:
     sdk: flutter
 

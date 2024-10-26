@@ -32,6 +32,11 @@ import 'package:uuid/uuid.dart';
 import 'package:video_thumbnail/video_thumbnail.dart';
 
 class Constant {
+  // static const globalUrl = "https://foodie.siswebapp.com/";
+  static const globalUrl = "https://goride.siswebapp.com";
+  static const userPlaceHolder =
+      "https://firebasestorage.googleapis.com/v0/b/goride-1a752.appspot.com/o/placeholderImages%2Fuser-placeholder.jpeg?alt=media&token=34a73d67-ba1d-4fe4-a29f-271d3e3ca115";
+
   static const String phoneLoginType = "phone";
   static const String googleLoginType = "google";
   static const String appleLoginType = "apple";
@@ -58,9 +63,6 @@ class Constant {
   static const String rideComplete = "Ride Completed";
   static const String rideCanceled = "Ride Canceled";
 
-  static const globalUrl = "https://foodie.siswebapp.com/";
-  static const userPlaceHolder =
-      "https://firebasestorage.googleapis.com/v0/b/goride-1a752.appspot.com/o/placeholderImages%2Fuser-placeholder.jpeg?alt=media&token=34a73d67-ba1d-4fe4-a29f-271d3e3ca115";
 
   static Position? currentLocation;
   static String? country;

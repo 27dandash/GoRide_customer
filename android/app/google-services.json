@@ -1,1 +1,29 @@
-{  "Replace your file": "1" }
+{
+  "project_info": {
+    "project_number": "191023538289",
+    "project_id": "moalem-app-94937",
+    "storage_bucket": "moalem-app-94937.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191023538289:android:842e5bc9c71f3be831bbd0",
+        "android_client_info": {
+          "package_name": "com.goride.customer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL1ntePu-RsjxqU5C2pp23C12a-kK1-UY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

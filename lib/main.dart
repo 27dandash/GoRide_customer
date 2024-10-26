@@ -3,11 +3,11 @@ import 'package:customer/controller/global_setting_conroller.dart';
 import 'package:customer/firebase_options.dart';
 import 'package:customer/services/localization_service.dart';
 import 'package:customer/themes/Styles.dart';
-import 'package:customer/ui/home_screens/home_screen.dart';
 import 'package:customer/ui/splash_screen.dart';
 import 'package:customer/utils/DarkThemeProvider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -16,9 +16,15 @@ import 'utils/Preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  print('first init firebase @@@@@@@@@@@@');
+  await dotenv.load(fileName: ".env");
+
+  if (Firebase.apps.isEmpty) {
+    print('second init firebase @@@@@@@@@@@@');
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  }
   await Preferences.initPref();
   runApp(const MyApp());
 }
@@ -77,7 +83,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             home: GetBuilder<GlobalSettingController>(
                 init: GlobalSettingController(),
                 builder: (context) {
-                  return const HomeScreen();
+                  return const SplashScreen();
                 }));
       }),
     );
